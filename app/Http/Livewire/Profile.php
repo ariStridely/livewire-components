@@ -7,6 +7,7 @@ use Livewire\Component;
 class Profile extends Component
 {
     public $description = 'Hi, my name is David!';
+    public $color;
 
     public function submit()
     {

@@ -7,6 +7,10 @@
             wire:model.debounce.3000ms="description" 
         />
 
+        <x-color-picker 
+            wire:model="color"
+        />
+
         <button>Save</button>
     </form>
     
