@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Profile;
 use App\Http\Livewire\ShowPost;
+use App\Http\Livewire\Users\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,4 @@ Route::get('/', function () {
 
 Route::get('/profile', Profile::class);
 Route::get('/posts', ShowPost::class);
+Route::get('/users', Index::class);
