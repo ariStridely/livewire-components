@@ -1,8 +1,12 @@
 <div
     x-data="{ color: '#ffffff' }"
     x-init="
-        picker = new Picker($refs.button);
+        picker = new Picker({
+            parent: $refs.button,
+            alpha: false,
+        });
         picker.onDone = rawColor => {
+            console.log(rawColor);
             color = rawColor.hex;
             $dispatch('input', color)
         }
