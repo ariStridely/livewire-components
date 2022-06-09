@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\ChartBuilder;
 use Livewire\Component;
 
 class Profile extends Component
@@ -14,8 +15,17 @@ class Profile extends Component
         dd($this);
     }
 
+    public function updateChart()
+    {
+        $this->dispatchBrowserEvent('chart-update', [
+            'chart' => resolve(ChartBuilder::class)->handle(),
+        ]);
+    }
+
     public function render()
     {
-        return view('livewire.profile');
+        return view('livewire.profile', [
+            'chart' => resolve(ChartBuilder::class)->handle(),
+        ]);
     }
 }

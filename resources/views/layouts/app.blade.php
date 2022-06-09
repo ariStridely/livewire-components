@@ -8,13 +8,17 @@
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
     
     @livewireStyles
     @stack('styles')
 </head>
 <body>
     
-    <div>
+    <div class="max-w-xl mt-8 mx-auto">
         {{ $slot }}
     </div>
 
